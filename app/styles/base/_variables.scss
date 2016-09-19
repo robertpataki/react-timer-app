@@ -1,7 +1,13 @@
 // Colours
 $grey: #333333;
 $white: #FFFFFF;
+$blue: rgba(0, 36, 0, 0.2);
 
-// Navigation colours
-$nav-background: $grey;
+// Navigation
+$nav-background-color: $grey;
 $nav-color: $white;
+
+// Clock
+$clock-text-color: $white;
+$clock-background-color: $blue;
+$clock-size: 14rem;
