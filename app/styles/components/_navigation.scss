@@ -9,6 +9,10 @@
 .menu > li > a {
 	padding-right: 6px;
 	padding-left: 6px;
+
+	&.active-link {
+		font-weight: 700;
+	}
 }
 
 .top-bar-right {
