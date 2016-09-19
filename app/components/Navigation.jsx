@@ -11,10 +11,10 @@ var Navigation = React.createClass({
       				React Timer App
       			</li>
       			<li>
-      				<IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
+      				<IndexLink to="/timer" activeClassName="active-link">Timer</IndexLink>
       			</li>
       			<li>
-      				<Link to="/countdown" activeClassName="active-link">Countdown</Link>
+      				<Link to="/" activeClassName="active-link">Countdown</Link>
       			</li>
     			</ul>
   			</div>
