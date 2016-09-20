@@ -32,7 +32,7 @@ describe ('Clock', () => {
 		});
 
 		it('should format seconds when min/sec are less than 1', () => {
-			var clock = TestUtils.renderIntoDocument(<Clock/>);
+			var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={0}/>);
 			var seconds = 61;
 			var expected = '01:01'
 			var actual = clock.formatSeconds(seconds);
