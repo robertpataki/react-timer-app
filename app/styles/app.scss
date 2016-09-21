@@ -1,12 +1,6 @@
 @import 'base/variables';
+@import 'base/base';
 @import 'components/navigation';
 @import 'components/clock';
 @import 'components/controls';
-
-button {
-  appearance: none;
-}
-
-*:focus {
-	outline: none;
-}
+@import 'components/page-title';
