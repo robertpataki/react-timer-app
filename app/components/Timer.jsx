@@ -40,17 +40,15 @@ var Timer = React.createClass({
 
 		if(prevState.timerStatus !== this.state.timerStatus) {
 			switch(this.state.timerStatus) {
-				case ('started'):
+				case 'started':
 					this.startTimer();
 					break;
-				case ('paused'):
+				case 'stopped':
+						this.setState({
+							count: 0
+						});
+				case 'paused':
 					this.resetTimer();
-					break;
-				case ('stopped'):
-					this.resetTimer();
-					this.setState({
-						count: 0
-					});
 					break;
 			}
 		}
