@@ -7,8 +7,6 @@ var TimerControls = React.createClass({
   },
 
   onStatusChange: function(newStatus) {
-    // console.log('[TimerControls] - onStatusChange() - newStatus: ', newStatus);
-
     return () => {
       this.props.onStatusChange(newStatus);
     }
