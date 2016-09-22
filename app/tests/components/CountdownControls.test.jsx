@@ -22,7 +22,7 @@ describe('CountdownControls', ()=> {
     });
   });
 
-  it('should render `Start` button when started', () => {
+  it('should render `Start` button when paused', () => {
     var controls = TestUtils.renderIntoDocument(<CountdownControls countdownStatus="paused"  onStatusChange={() => {}}/>);
     var $el = $(ReactDOM.findDOMNode(controls));
 
