@@ -20,32 +20,26 @@ describe('TimerControls', () => {
       expect($clearButton.length).toBe(1);
     });
 
-    it('should render the `Pause` button when the timer is `started`', () => {
+    it('should render the `Pause` button when the timer is `started`, but not the `Start` button', () => {
       var timerControls = TestUtils.renderIntoDocument(<TimerControls timerStatus="started" onStatusChange={() => {}}/>);
       var $el = $(ReactDOM.findDOMNode(timerControls));
+
       var $pauseButton = $el.find(".button:contains('Pause')");
+      var $startButton = $el.find(".button:contains('Start')");
+
+      expect($startButton.length).toBe(0);
       expect($pauseButton.length).toBe(1);
     });
 
-    it('should not render the `Start` button when the timer is `started`', () => {
-      var timerControls = TestUtils.renderIntoDocument(<TimerControls timerStatus="started" onStatusChange={() => {}}/>);
-      var $el = $(ReactDOM.findDOMNode(timerControls));
-      var $startButton = $el.find(".button:contains('Start')");
-      expect($startButton.length).toBe(0);
-    });
-
-    it('should render the `Start` button when the timer is `stopped`', () => {
+    it('should render the `Start` button when the timer is `stopped`, but not the `Pause` button', () => {
       var timerControls = TestUtils.renderIntoDocument(<TimerControls timerStatus="stopped" onStatusChange={() => {}}/>);
       var $el = $(ReactDOM.findDOMNode(timerControls));
-      var $startButton = $el.find(".button:contains('Start')");
-      expect($startButton.length).toBe(1);
-    });
 
-    it('should not render the `Pause` button when the timer is `stopped`', () => {
-      var timerControls = TestUtils.renderIntoDocument(<TimerControls timerStatus="stopped" onStatusChange={() => {}}/>);
-      var $el = $(ReactDOM.findDOMNode(timerControls));
+      var $startButton = $el.find(".button:contains('Start')");
       var $pauseButton = $el.find(".button:contains('Pause')");
+
       expect($pauseButton.length).toBe(0);
+      expect($startButton.length).toBe(1);
     });
   });
 });
